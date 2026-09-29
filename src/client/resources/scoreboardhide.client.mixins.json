@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "Scoreboard.hide.scoreboardhide.mixin.client",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "HudMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

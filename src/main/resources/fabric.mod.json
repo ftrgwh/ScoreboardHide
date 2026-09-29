@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "scoreboardhide",
+  "version": "${version}",
+  "name": "ScoreboardHide",
+  "description": "Client-side mod that hides the scoreboard sidebar. Press O (configurable) to toggle.",
+  "authors": [
+    "ftr"
+  ],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/scoreboardhide/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "Scoreboard.hide.scoreboardhide.client.ScoreboardhideDataGenerator"
+    ],
+    "client": [
+      "Scoreboard.hide.scoreboardhide.client.ScoreboardhideClient"
+    ],
+    "main": [
+      "Scoreboard.hide.scoreboardhide.Scoreboardhide"
+    ]
+  },
+  "mixins": [
+    "scoreboardhide.mixins.json",
+    {
+      "config": "scoreboardhide.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
